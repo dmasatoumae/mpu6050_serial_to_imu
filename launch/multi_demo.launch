@@ -15,6 +15,18 @@
     <param name="temperature_data" value="temperature2"/>
 
   </node>
+
+  <node pkg="mpu6050_serial_to_imu" type="mpu6050_serial_to_imu_node" name="mpu6050_serial_to_imu_node_3" required="true">
+    <!--
+    <param name="tf_parent_frame_id" value="imu_base2"/>
+    -->
+    <param name="port" value="/dev/ttyACM2"/>
+    <param name="tf_frame_id" value="imu_link3"/>
+    <param name="frame_id" value="imu_link3"/>
+    <param name="imu_data" value="data3"/>
+    <param name="temperature_data" value="temperature2"/>
+
+  </node>
   <!--
   <node pkg="rviz" type="rviz" name="rviz" args="-d $(find mpu6050_serial_to_imu)/rviz/demo.rviz" required="true"/>
   -->
